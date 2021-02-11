@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Ish Kapoor</title>
+	<link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+	<div class="wrapper">
+		<header>
+			<div class="logo">
+				<img src="Ish_Logo.png" height = "10%" width = "10%" alt="Logo with name">
+			</div>
+			<div class="menu">
+				<ul>
+					<li><a href="#">My Life</a></li>
+					<li><a href="https://github.com/ishkapoor2000?tab=repositories">My Project</a></li>
+					<li><a href="#">My Goal</a></li>
+					<li><a href="#">Blog</a></li>
+					<li><a href="https://www.instagram.com/2000_i_k/">Photos</a></li>
+					<li class="btn"><a href="https://github.com/ishkapoor2000">Keep in touch</a></li>
+				</ul>
+			</div>
+		</header>
+		<div class="home">
+			<div class="container">
+				<div class="person">
+					<span class="person-overlay"></span>
+					<img src="https://images.unsplash.com/photo-1506468203959-a06c860af8f0?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" alt="Image of person">
+				</div>
+				<div class="home-text">
+					<h6 class="student">Student</h6>
+					<!-- <h1 class="name">ISH KAPOOR</h1> -->
+					<h1 class="name">ISH KAPOOR</h1>
+					<p class="small-intro">Hello wolrd! I am Ish Kapoor - 20yrs old and I am a B. Tech. student.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<!-- JQUERY LINK -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	
+	<!-- LETTERING JS -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/lettering.js/0.7.0/jquery.lettering.min.js"></script>
+	
+	<!-- ANIME JS -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+
+	<!-- SCRIPTING -->
+	<script>
+		$(document).ready(function(){
+			$(".name, .student, .small-intro").lettering();
+
+			// IMAGES OVERLAY EFFECT
+			anime({
+				targets: '.home .person-overlay',
+				translateX: 1270,
+				delay: 1000,
+				duration: 1200,
+				easing: 'easeInSine'
+			})
+
+			anime({
+				targets: '.home .person img',
+				opacity: 1,
+				delay: 1500,
+				duration: 1500,
+				easing: 'easeInSine'
+			})
+
+			// STUDENT
+			anime({
+				targets: '.student span',
+				opacity: 1,
+				duration: 1500,
+				easing: 'easeInSine',
+				delay: anime.stagger(100, {start: 3000})
+			})
+
+			// ISH NAME - FADE IN
+			anime({
+				targets: '.name span',
+				opacity: 1,
+				duration: 3000,
+				easing: 'easeInSine',
+				delay: anime.stagger(100, {start: 4500})
+			})
+
+			// ISH NAME - UP & DOWN
+			anime({
+				targets: '.name .char2, .name .char5, .name .char7, .name .char9',
+				keyframes: [
+					{
+						translateY: 100,
+						duration: 1500
+					}
+				],
+				easing: 'easeInOutExpo',
+				delay: 8000,
+			})
+			anime({
+				targets: '.name .char3, .name .char4, .name .char6, .name .char8, .name .char10',
+				keyframes: [
+					{
+						translateY: -100,
+						duration: 1500
+					}
+				],
+				easing: 'easeInOutExpo',
+				delay: 8000,
+			})
+
+			// LOGO
+			anime({
+				targets: '.logo',
+				opacity: 1,
+				duration: 3000,
+				delay: 9500
+			})
+
+			// MENU
+			anime({
+				targets: '.menu li',
+				opacity: 1,
+				duration: 3000,
+				delay: anime.stagger(150, {start: 10500})
+			})
+
+			// INTRO
+			anime({
+				targets: '.small-intro span',
+				opacity: 1,
+				duration: 1000,
+				easing: 'easeInSine',
+				delay: anime.stagger(50, {start: 11000})
+			})
+
+		});
+		
+	</script>
+</body>
+
+</html>

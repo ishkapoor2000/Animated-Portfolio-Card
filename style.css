@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Giga&family=Roboto:wght@300&family=Yusei+Magic&display=swap');
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	outline: none;
+	user-select: none;
+}
+
+body {
+	background: #000;
+	font-family: Open sans;
+}
+
+header {
+	padding: 40px 50px;
+}
+
+header .logo {
+	float: left;
+}
+
+header .menu {
+	float: right;
+}
+
+header .menu ul li {
+	display: inline-block;
+	margin: 0 20px;
+}
+
+header .menu ul li:last-child {
+	margin-right: 0;
+}
+
+header .menu ul li a {
+	color: #fff;
+	text-decoration: none;
+	text-transform: uppercase;
+	transition: all ease 0.5s;
+}
+
+header .menu ul li a:hover {
+	color: #fff770;
+}
+
+/*HEADER BUTTON*/
+header .menu ul li.btn a {
+	background-color: #fff770;
+	color: #000;
+	padding: 14px 27px;
+	border-top-left-radius: 25px;
+	border-bottom-right-radius: 25px;
+}
+
+header .menu ul li.btn a:hover {
+	border-radius: 25px;
+	border-top-left-radius: 0;
+	border-bottom-right-radius: 0;
+}
+
+/* CONTAINER */
+.home .container {
+	max-width: 1266px;
+	margin: 0 auto;
+}
+
+/* ISH IMAGE */
+.home .person {
+	float: right;
+	position: relative;
+	margin: 70px 180px 0;
+	border-radius: 70px 0 70px 0;
+	overflow: hidden;
+}
+
+.home .person img {
+	filter: brightness(1.5);
+	overflow: hidden;
+}
+
+.home .person-overlay {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: -100%;
+	width: 100%;
+	height: 100%;
+	background-image: linear-gradient(to right, red , blue);
+	z-index: 99;
+}
+
+/* ISH TEXT */
+.home-text {
+	color: #fff;
+	margin-top: 220px;
+	position: absolute;
+}
+
+.home-text h6 {
+	text-transform: uppercase;
+	letter-spacing: 10px;
+	font-size: 16px;
+}
+
+.home-text h1 {
+	text-transform: uppercase;
+	font-size: 100px;
+	font-family: Lexend Giga, sans-serif;
+}
+
+.home-text p {
+	max-width: 500px;
+	font-size: 16px;
+	margin-top: 230px;
+}
+
+.home-text .name span {
+	margin-right: 65px;
+	/* margin-right: 130px; */
+	display: inline-block;
+}
+
+.home-text .name span:last-child {
+	margin-right: 0;
+}
+
+/* DEFAULT STATE HIDE */
+.home .person img,
+.student span,
+.name span,
+.logo,
+.menu li,
+.small-intro span {
+	opacity: 0;
+}
